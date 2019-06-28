@@ -1,0 +1,84 @@
+@import '../index.less';
+
+.LBodyOuter{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:@bg-color01;
+    .LHeader{
+        height:48px;
+        width:100vw;
+        background:@wihte-color;
+        flex-shrink:0;
+        border-bottom:2px solid @line-color01
+    }
+    .LBody{
+        flex-grow: 1;
+        width:100vw;
+        display:flex;
+        flex-direction:row;
+        .LTree{
+            width:200px;
+            background:@wihte-color;
+            flex-shrink:0;
+        }
+        .LContent{
+            flex-grow:1;
+            overflow:auto;
+            padding:10px;
+        }
+    }
+}
+
+//顶部
+.CHeader{
+    display:flex;
+    flex-direction:row;
+    height:100%;
+    padding:0 10px;
+    .CLogo{
+        width:100px;
+        height:100%;
+        padding:5px 0 0 0;
+    }
+    .CNavBar{
+        flex-grow:1;
+        height:100%;
+        display:flex;
+        align-items: center;
+        justify-content:flex-end;
+    }
+}
+
+//菜单
+.CTree{
+    height:100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+    :global{
+        .ant-menu{
+            background:@wihte-color;
+            height:100%;
+            border-right:0;
+        }
+    }
+}
+
+//主体内容
+.CContent{
+    display:flex;
+    height:100%;
+    background:@wihte-color;
+    flex-direction:column;
+    .CToolBar{
+        height: 40px;
+        flex-shrink:0;
+        line-height:40px;
+        padding:0 20px;
+        border-bottom:1px solid @line-color01;
+    }
+    .CMain{
+        flex-grow: 1;
+        overflow:auto;
+    }
+}
